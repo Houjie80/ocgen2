@@ -42,7 +42,7 @@ jobs:
           mkdir sdk && tar -xf sdk.tar.xz -C sdk --strip-components=1
 
           echo -e "\033[34m📦 Cloning $PKG_NAME package \033[0m"
-          cp -rf ./luci-theme-hj sdk/package/${PKG_NAME}
+          cp -rf ./ocgen sdk/package/${PKG_NAME}
 
       - name: 📡 Set up SDK feeds
         run: |
@@ -65,7 +65,7 @@ jobs:
           make package/${PKG_NAME}/{clean,compile} -j$(nproc) > /dev/null 2>&1
 
           echo -e "\033[34m📦 Compilation completed: \033[0m"
-          PKG_PATH=$(find bin/packages/x86_64/action/luci-theme*)
+          PKG_PATH=$(find bin/packages/x86_64/action/luci-app*)
           PKG_FILE=$(basename $PKG_PATH)
           echo "PKG_PATH=sdk/$PKG_PATH" >> $GITHUB_ENV
           echo "PKG_FILE=$PKG_FILE" >> $GITHUB_ENV
