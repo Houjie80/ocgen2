@@ -10,7 +10,7 @@ THEME_TITLE:=hj ocgen
 PKG_NAME:=luci-app-$(THEME_NAME)
 LUCI_TITLE:=hj Theme by houjie
 LUCI_DEPENDS:=
-PKG_VERSION:=1.0.4
+PKG_VERSION:=2.0.1
 PKG_RELEASE:=11032024
 
 define Package/luci-app-$(THEME_NAME)/postinst
