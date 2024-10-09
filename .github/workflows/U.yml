@@ -49,7 +49,7 @@ jobs:
               echo ""
               git clone https://github.com/Houjie80/ocgen2
               mkdir feeds artifacts
-              cp -rf ./luci-app-ocgen ./feeds
+              cp -rf ./ocgen ./feeds
         
       - name: Building luci-app-neko
         uses: nosignals/gh-action-sdk@main
