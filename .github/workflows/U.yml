@@ -80,7 +80,7 @@ jobs:
         shell: bash
         run: |
           mkdir ./release
-          cp -rf ./neko-23.05.4_x86_64/luci-app* ./release/luci-app-ocgen_${{ inputs.version }}_dev_all.ipk
+          cp -rf ./neko-23.05.4_x86_64/ocgen ./release/luci-app-ocgen_${{ inputs.version }}_dev_all.ipk
         
       - name: Upload release asset
         uses: svenstaro/upload-release-action@v2
