@@ -5,15 +5,15 @@
 #
 
 include $(TOPDIR)/rules.mk
-THEME_NAME:ocgen
-THEME_TITLE:=hj ocgen
-PKG_NAME:=luci-app-$(THEME_NAME)
+Apo_NAME:luci-app-ocgen
+APP_TITLE:=hj ocgen
+PKG_NAME:=luci-app-ocgen
 LUCI_TITLE:=hj Theme by houjie
 LUCI_DEPENDS:=
-PKG_VERSION:=2.0.1
+PKG_VERSION:=2.0.3
 PKG_RELEASE:=11032024
 
-define Package/luci-app-$(THEME_NAME)/postinst
+define Package/luci-app-ocgen/postinst
 #!/bin/sh
 
 rm -f /tmp/luci-indexcache
