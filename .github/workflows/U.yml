@@ -55,8 +55,8 @@ jobs:
         uses: nosignals/gh-action-sdk@main
         env:
           ARCH: ${{ matrix.arch }}-${{ matrix.release }}
-          ARTIFACTS_DIR: ${{ github.workspace }}/artifacts
-          FEED_DIR: ${{ github.workspace }}/feeds
+          ARTIFACTS_DIR: ${{ github.workspace }}/ocgen/artifacts
+          FEED_DIR: ${{ github.workspace }}/ocgen/feeds
           PACKAGES: luci-app-ocgen
           NO_SHFMT_CHECK: 1
         
