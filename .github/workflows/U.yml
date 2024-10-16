@@ -89,7 +89,7 @@ jobs:
           file: ./release/*
           overwrite: true
           prerelease: true
-          tag: dev
+          tag: tes
           file_glob: true
           body: |
             # LUCI APP RAMFREE
