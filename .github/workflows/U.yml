@@ -79,14 +79,14 @@ jobs:
       - name: Moving artifact to releases
         shell: bash
         run: |
-          mkdir ./release
-          cp -rf ./neko-23.05.4_x86_64/* ./release/luci-app-ocgen_${{ inputs.version }}_dev_all.ipk
+          mkdir ./artifact
+          cp -rf ./neko-23.05.4_x86_64/* ./artifact/luci-app-ocgen_${{ inputs.version }}_dev_all.ipk
         
       - name: Upload release asset
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./release/*
+          file: ./artifact/*
           overwrite: true
           prerelease: true
           tag: tes
